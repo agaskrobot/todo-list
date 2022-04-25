@@ -45,7 +45,7 @@ export const TodoItem = (props: Item) => {
 				</>
 			) : (
 				<>
-					<p className="ml-5 w-full flex">{item.title}</p>
+					<p className={`ml-5 w-full flex ${ item.completed ? 'line-through' : ''}`}>{item.title}</p>
 					<div
 						onClick={() => setEditActive(true)}
 						className={`justify-self-end cursor-pointer pr-3 ${
